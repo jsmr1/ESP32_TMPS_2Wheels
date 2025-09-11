@@ -151,7 +151,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks {
             v_temperature = cManufacturerData[2];  // get temperature in °C
             v_pressure_psi_x10 = (uint16_t)cManufacturerData[3] << 8 | cManufacturerData[4]; // use two bytes for out 16bit value, psi x10
             //v_pressure = (float)v_pressure_psi_x10 / 10.0;          // pressure in psi
-            v_pressure = (float)v_pressure_psi_x10 / 10.0 / 14.50377; // pressure in bar minus normal air pressure
+            v_pressure = ((float)v_pressure_psi_x10 / 10.0  - 14.50377) / 14.50377; // pressure in bar minus normal air pressure
           }
           
           if (h_updated == 1) {   // h = hinten = rear
