@@ -13,3 +13,7 @@ Source Files: https://github.com/upiir/arduino_tpms_tire_pressure
 * for ESP32C3 Dev module
 
 See video https://www.youtube.com/watch?v=jDe2ssM6b9o
+
+Version 3a
+The name of the devices were not found in the recent Arduino-IDE. So now only addresses were used. 
+Totaly rewriten for faster recognition of the BLE value changes.
